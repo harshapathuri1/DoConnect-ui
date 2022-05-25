@@ -1,0 +1,13 @@
+.content{
+    float: left;
+    font-size:25px;
+    color:rgb(251, 255, 0);
+    font-weight:bold;
+    background-color:red;
+    width: 100%;
+}
+.content span { float: left; width: 50%; text-align: center; }
+
+.right{
+    background-color:#53EDF0;
+} 

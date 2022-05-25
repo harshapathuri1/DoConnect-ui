@@ -1,0 +1,30 @@
+
+<img class="img-responsive" src="assets/DoConnect.jpg" width="400" height="400">
+<div class="container">
+    <h2 >Hello Typical Thinkers </h2>
+      <form #loginform="ngForm" (ngSubmit)="loginUser()">
+      <div class= "text-right" class="form-group">
+        <label for="email">Email:</label>
+        <input type="email"  placeholder="Enter email" name="email"[(ngModel)]="user.emailId" required pattern="[^@\s]+@[^@\s]+"   #email="ngModel"
+        [class.is-invalid]="email.invalid && email.touched"
+        >
+    <small class="text-danger" [class.d-none]="email.valid || email.untouched" >Email id is required field</small>
+      </div><br>
+      <div class="form-group">
+        <label for="pwd">Password:</label>
+      
+        <input type="password"  placeholder="Enter password" name="password"  [(ngModel)]="user.password" #password="ngModel" required
+        [class.is-invalid]="password.invalid && password.touched"
+        >
+        <small class="text-danger" [class.d-none]="password.valid || password.untouched" >password is required field</small>
+      </div>
+      <div class="checkbox"><br>
+        <label><input type="checkbox" name="remember"> Remember me</label>
+      </div>
+      <button type="submit" class="btn btn-info ">Login</button>
+
+    </form>
+    <small class="float -right" [routerLink]="[ 'registration']"> New User? Register Here</small>
+  </div>
+
+  
